@@ -16,13 +16,10 @@ Subject: {}\n\
 {}\
 ".format(gmail_user, ", ".join(to), subject, body)
 
-try:
-    server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-    server.ehlo()
-    server.login(gmail_user, gmail_password)
-    server.sendmail(gmail_user, to, email_text)
-    server.close()
+server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+server.ehlo()
+server.login(gmail_user, gmail_password)
+server.sendmail(gmail_user, to, email_text)
+server.close()
 
-    print('Email sent!')
-except:
-    print('Something went wrong...')
+print('Email sent!')
