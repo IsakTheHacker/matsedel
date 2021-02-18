@@ -32,3 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run Python script
         run: python ./scripts/sendmail.py
+        env:
+          GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+          GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+          SEND_MENU_TO: ${{ secrets.SEND_MENU_TO }}
