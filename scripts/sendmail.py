@@ -1,5 +1,6 @@
 import smtplib
 import os
+import rssgetmenu
 
 gmail_user = os.environ['GMAIL_ADDRESS'].strip("\"")
 gmail_password = os.environ['GMAIL_PASSWORD'].strip("\"")
