@@ -7,7 +7,7 @@ gmail_password = os.environ['GMAIL_PASSWORD'].strip("\"")
 
 to = os.environ["SEND_MENU_TO"].strip("\"").split(",")
 subject = 'Dagens mat'
-body = "Hello World!"
+body = "\n".join(rssgetmenu.getmenu())
 
 email_text = "\
 From: {}\n\
