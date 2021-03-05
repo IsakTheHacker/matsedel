@@ -7,4 +7,4 @@ def getmenu():
 		return NewsFeed.entries[0].summary.split("<br />")
 	except IndexError:
 		print("Matsedeln kunde inte hittas!")
-		sys.exit(1)
+		sys.exit(0)
